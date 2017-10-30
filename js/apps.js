@@ -46,6 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	//koniec
 
-	
+	//Zadanie 4
+
+	var backButton = document.querySelector('.back-button');
+	console.log(backButton);
+
+backButton.addEventListener('click', function(){
+	window.scroll(0,0);
+});
+//koniec
+
+
+
 
 })

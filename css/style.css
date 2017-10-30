@@ -313,3 +313,11 @@ footer p {
   color: #424343;
   margin-top: 3rem;
 }
+
+.back-button {
+  background-color: #ea6c56;
+  color: white;
+  width: 30%;
+  margin: 3rem;
+
+}
