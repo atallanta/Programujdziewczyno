@@ -302,6 +302,14 @@ nav {
   background-color: #ea6c56;
 }
 
+.slider>li {
+  display: none;
+}
+
+.visible {
+  display: inline-block;
+}
+
 footer {
   margin-top: 4rem;
   background-color: #44ca85;
