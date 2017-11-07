@@ -302,11 +302,12 @@ nav {
   background-color: #ea6c56;
 }
 
-.slider>li {
+
+.slider li {
   display: none;
 }
 
-.visible {
+.slider .visible {
   display: inline-block;
 }
 

@@ -58,6 +58,23 @@ backButton.addEventListener('click', function(){
 
 //Zadanie 5
 
+var items = document.querySelectorAll('.slider li');
+var dots = document.querySelectorAll('.dot');
+console.log(items, dots);
+
+function toggleSlide(slideNumber){
+	for (var i = 0; i < dots.length; i++) {
+		dots[i].classList.remove('active');
+		items[i].classList.remove('visible'); 
+	}
+dots[slideNumber].classList.add('active');
+items[slideNumber].classList.add('visible');
+} 
+
+dots[0].addEventListener('click', function(){toggleSlide(0)});
+dots[1].addEventListener('click', function(){toggleSlide(1)});
+dots[2].addEventListener('click', function(){toggleSlide(2)});
+
 
 //koniec
 
