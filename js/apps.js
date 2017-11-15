@@ -78,5 +78,57 @@ dots[2].addEventListener('click', function(){toggleSlide(2)});
 
 //koniec
 
+//Zadanie 6
+
+var addButton = document.getElementById('addButton');
+var taskList = document.getElementById('taskList');
+var taskContent = document.getElementById('taskContent');
+
+// function addTask() {
+// 	var newTask = document.createElement('li');
+// 	newTask.innerHTML = taskContent.value;
+// 	taskList.appendChild(newTask);
+// 	taskContent.value = '';
+	
+// }
+// addButton.addEventListener('click', addTask);
+function deleteTask(){
+	this.parentElement.parentNode.removeChild(this.parentElement);
+}
+
+/*
+	<ul >
+		<li>
+			<div>Treść</div>
+			<button class="btn delet-btn" onClick="jakaśFunkcja">Usuń</button>
+		</li>		
+	</ul>
+*/
+
+
+
+function addTaskWithDeleteButton(){	
+	//div
+var newTaskContent = document.createElement('div');
+	newTaskContent.innerHTML = taskContent.value;
+	
+	//button
+var deleteButton = document.createElement('button');
+	deleteButton.innerHTML = 'Usuń';
+	deleteButton.classList.add('btn', 'delete-btn');
+	deleteButton.addEventListener('click', deleteTask);
+	
+	// li
+var newTask = document.createElement('li');	
+	newTask.appendChild(newTaskContent);
+	newTask.appendChild(deleteButton);
+
+	//ul
+	taskList.appendChild(newTask);
+	taskContent.value = '';
+
+}
+addButton.addEventListener('click', addTaskWithDeleteButton)
+//koniec
 
 })
